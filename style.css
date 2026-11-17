@@ -1,0 +1,232 @@
+/* 全局基础设置；Ctrl + F 搜索【】中的关键词可快速定位现场修改位置。 */
+* { /* 星号选中所有元素，统一计算尺寸的方法 */
+    box-sizing: border-box; /* 内边距和边框包含在宽度内，避免手机溢出 */
+} /* 全局尺寸设置结束 */
+body { /* 整个页面的默认样式 */
+    margin: 0; /* 移除浏览器默认外边距 */
+    background-color: #F6F4ED; /* 【修改页面背景颜色】自然米白色，可改成 #EAF2FA 浅蓝色 */
+    color: #26352E; /* 【修改文字颜色】正文使用深绿黑色 */
+    font-family: Arial, Helvetica, sans-serif; /* 使用本机常见字体，无需下载 */
+    font-size: 16px; /* 全站基本字号，老师要求放大文字时修改这里 */
+    line-height: 1.7; /* 行距为字号的 1.7 倍，提高阅读舒适度 */
+} /* 页面默认样式结束 */
+a { /* 所有链接的默认样式 */
+    color: inherit; /* 链接沿用所在区域的文字颜色 */
+    text-underline-offset: 4px; /* 下划线和文字之间留一点距离 */
+} /* 链接默认设置结束 */
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, video:focus-visible { /* 键盘焦点的可见样式 */
+    outline: 3px solid #B77924; /* 按 Tab 时显示明显的焦点框 */
+    outline-offset: 4px; /* 焦点框与元素留出距离 */
+} /* 焦点设置结束 */
+.container { /* 重复使用的水平对齐容器 */
+    width: 90%; /* 两边各留出约 5% 空白 */
+    max-width: 1100px; /* 大屏幕内容最多 1100 像素宽 */
+    margin: 0 auto; /* 自动左右外边距使容器居中 */
+} /* 容器样式结束 */
+header { /* 页面顶部区域 */
+    background-color: #243F33; /* 【修改顶部背景颜色】可改成 #234B68 深蓝色 */
+    color: #FFFFFF; /* 【修改顶部文字颜色】白色文字与深色背景形成对比 */
+    padding: 22px 0; /* 上下内边距 22 像素，左右由容器控制 */
+} /* 顶部背景设置结束 */
+.header-row, .footer-row { /* 顶部和页脚共用简单弹性排列 */
+    display: flex; /* 子元素横向排列 */
+    justify-content: space-between; /* 左右内容分别靠两边 */
+    align-items: center; /* 垂直方向居中 */
+    flex-wrap: wrap; /* 空间不够时自动换行 */
+    gap: 20px; /* 换行和相邻内容间保留空隙 */
+} /* 横向排列设置结束 */
+.brand { /* 顶部品牌链接 */
+    font-size: 24px; /* 品牌主字大小 */
+    font-weight: bold; /* 品牌加粗 */
+    text-decoration: none; /* 移除品牌下划线 */
+} /* 品牌设置结束 */
+.brand span { /* 品牌下的小字 */
+    display: block; /* 放在单独的一行 */
+    font-size: 10px; /* 小字字号 */
+    letter-spacing: 2px; /* 字母间距增加一点 */
+    font-weight: normal; /* 小字不加粗 */
+} /* 品牌小字结束 */
+nav { /* 导航链接的排列 */
+    display: flex; /* 链接横向排列 */
+    flex-wrap: wrap; /* 小屏幕允许导航换行 */
+    gap: 22px; /* 导航链接之间的距离 */
+} /* 导航排列结束 */
+nav a { /* 每一个导航链接 */
+    text-decoration: none; /* 平时不显示下划线 */
+    padding: 6px 0; /* 上下留出点击空间 */
+} /* 导航链接设置结束 */
+nav a:hover { /* 鼠标停在导航上时 */
+    text-decoration: underline; /* 下划线提示可以点击，不使用动画 */
+} /* 导航悬停设置结束 */
+h1, h2, h3 { /* 三种标题共享的设置 */
+    line-height: 1.2; /* 标题行距较紧凑 */
+    margin: 0 0 18px; /* 标题下方统一留白 */
+} /* 标题共享设置结束 */
+h1 { /* 首页唯一的一级标题 */
+    font-size: 54px; /* 【修改主标题大小】桌面使用 54 像素 */
+} /* 一级标题设置结束 */
+h2 { /* 四个区域的二级标题 */
+    font-size: 32px; /* 统一的区域标题字号 */
+} /* 二级标题设置结束 */
+h3 { /* 图集、视频和服务的小标题 */
+    font-size: 21px; /* 小标题字号 */
+} /* 三级标题设置结束 */
+p { /* 段落统一间距 */
+    margin: 0 0 20px; /* 段落下方留白 */
+} /* 段落设置结束 */
+.eyebrow { /* 区域上方的小标题 */
+    font-size: 11px; /* 小标题字号 */
+    font-weight: bold; /* 小标题加粗 */
+    letter-spacing: 1.8px; /* 拉开字母间距 */
+    margin-bottom: 16px; /* 与主标题之间的间距 */
+} /* 小标题设置结束 */
+.hero { /* 首页的两列布局 */
+    display: grid; /* 网格布局，保持结构简单 */
+    grid-template-columns: 1fr 1.25fr; /* 右边照片比左边文字稍宽 */
+    gap: 48px; /* 两列间的距离 */
+    align-items: center; /* 两列垂直居中 */
+    padding-top: 68px; /* 首页上方留白 */
+    padding-bottom: 68px; /* 首页下方留白 */
+} /* 首页布局结束 */
+.lead { /* 首页重点介绍文字 */
+    font-size: 24px; /* 比正文大，建立视觉层级 */
+    line-height: 1.4; /* 重点句的行距 */
+} /* 重点介绍设置结束 */
+figure { /* 图片和说明的内容组 */
+    margin: 0; /* 清除浏览器默认大外边距 */
+    min-width: 0; /* 允许网格里的图片组收缩 */
+} /* 图片组设置结束 */
+img, video { /* 所有图片和视频 */
+    display: block; /* 移除行内媒体底部空隙 */
+    width: 100%; /* 随父容器宽度缩放 */
+    max-width: 100%; /* 不超过父容器宽度 */
+    height: auto; /* 自动高度，保持原始比例，不拉伸 */
+} /* 媒体尺寸设置结束 */
+figcaption { /* 图片下方的说明 */
+    margin-top: 10px; /* 紧贴图片但保留空隙，体现邻近原则 */
+    color: #526358; /* 次要文字使用柔和的深绿色 */
+    font-size: 13px; /* 图片说明字号 */
+} /* 图片说明设置结束 */
+.button { /* 按钮和首页联系链接共享样式 */
+    display: inline-block; /* 允许链接像按钮一样设置内边距 */
+    background-color: #243F33; /* 【修改按钮颜色】与顶部颜色保持重复 */
+    color: #FFFFFF; /* 按钮白色文字 */
+    border: 0; /* 去掉默认按钮边框 */
+    padding: 12px 24px; /* 按钮内部留白 */
+    font: inherit; /* 使用正文同样的字体和字号 */
+    text-decoration: none; /* 联系链接不显示下划线 */
+    cursor: pointer; /* 鼠标显示手形 */
+} /* 按钮设置结束 */
+.button:hover { /* 鼠标停留在按钮上 */
+    background-color: #365847; /* 稍微改变颜色提示可点击，没有动画 */
+} /* 按钮悬停结束 */
+.section-white { /* About 和 Contact 的背景 */
+    background-color: #FFFFFF; /* 白色与页面米色交替区分内容 */
+} /* 白色区块结束 */
+.section-space { /* 各主要区块统一间距 */
+    padding-top: 64px; /* 区域上方留白 */
+    padding-bottom: 64px; /* 区域下方留白 */
+} /* 区域间距结束 */
+.intro { /* 区域介绍段落 */
+    max-width: 760px; /* 限制行长，便于阅读 */
+    margin-bottom: 32px; /* 与下方内容分开 */
+} /* 区域介绍结束 */
+.gallery, .service-grid { /* 图集和服务的三列布局 */
+    display: grid; /* 使用简单网格 */
+    grid-template-columns: repeat(3, 1fr); /* 三个等宽列，repeat 代表重复三次 */
+    gap: 24px; /* 列间距离 */
+} /* 三列布局结束 */
+.video-panel { /* 视频及说明的深色面板 */
+    display: grid; /* 视频说明和播放器分两列 */
+    grid-template-columns: 1fr 1.4fr; /* 右侧播放器稍宽 */
+    align-items: center; /* 两列内容垂直居中 */
+    gap: 32px; /* 说明和视频之间的空隙 */
+    margin-top: 40px; /* 与上方图集分开 */
+    padding: 30px; /* 面板内部留白 */
+    background-color: #243F33; /* 深绿色强调视频部分 */
+    color: #FFFFFF; /* 深色背景搭配白色文字 */
+} /* 视频面板结束 */
+.service-card { /* 每一张服务卡片 */
+    padding: 28px; /* 卡片内部留白 */
+    border: 1px solid #CBD3C9; /* 细边框组织相关信息 */
+    background-color: #FFFFFF; /* 白色卡片背景 */
+} /* 服务卡片结束 */
+.service-card p { /* 服务卡内的段落 */
+    margin-bottom: 0; /* 末段不再额外增加底部空白 */
+} /* 服务段落结束 */
+.icon { /* 三个内嵌 SVG 图形的共同样式 */
+    width: 54px; /* 图形显示宽度 */
+    height: 54px; /* 图形显示高度 */
+    padding: 6px; /* 图形和背景边缘的距离 */
+    margin-bottom: 20px; /* 图形与服务标题的间距 */
+    background-color: #E7ECE5; /* 淡绿背景重复网站配色 */
+    fill: none; /* 不填充图形内部 */
+    stroke: #243F33; /* 图形线条为深绿色 */
+    stroke-width: 2; /* 线条宽度 */
+} /* 图形设置结束 */
+.contact-grid { /* 联系区域两列布局 */
+    display: grid; /* 左边文字、右边表单 */
+    grid-template-columns: 1fr 1fr; /* 两列等宽 */
+    gap: 64px; /* 两列间隔 */
+} /* 联系布局结束 */
+.form-note { /* 展示表单的使用说明 */
+    color: #526358; /* 次要文字颜色 */
+    font-size: 14px; /* 使用说明字号 */
+} /* 表单说明结束 */
+label { /* 输入框上方的标签 */
+    display: block; /* 每个标签占一整行 */
+    font-weight: bold; /* 标签加粗以便识别 */
+    margin-bottom: 6px; /* 与对应输入框保持邻近 */
+} /* 标签设置结束 */
+input, textarea { /* 所有表单输入区域 */
+    width: 100%; /* 填满表单所在列 */
+    min-width: 0; /* 防止输入区域撑开手机页面 */
+    padding: 12px; /* 输入文字与边框之间的距离 */
+    margin-bottom: 20px; /* 不同字段之间的间距 */
+    border: 1px solid #CBD3C9; /* 简单清晰的边框 */
+    border-radius: 0; /* 使用直角边框 */
+    background-color: #FFFFFF; /* 白色输入框 */
+    color: #26352E; /* 输入文字颜色 */
+    font: inherit; /* 与网页正文字体一致 */
+} /* 输入框设置结束 */
+textarea { /* 多行留言框 */
+    resize: vertical; /* 允许上下调整高度，避免横向拉宽页面 */
+} /* 留言框设置结束 */
+footer { /* 页脚整体样式 */
+    padding: 26px 0; /* 上下留白 */
+    border-top: 1px solid #CBD3C9; /* 分隔页脚和正文 */
+    font-size: 13px; /* 页脚次要文字字号 */
+} /* 页脚设置结束 */
+footer p { /* 页脚里的文字段落 */
+    margin: 0; /* 移除段落底部间距，使左右对齐 */
+} /* 页脚文字结束 */
+.skip-link { /* 键盘用户跳过导航的辅助链接 */
+    position: absolute; /* 不占用普通页面布局 */
+    left: 10px; /* 显示时距离左边 10 像素 */
+    top: -100px; /* 平时放在页面上方隐藏 */
+    padding: 10px; /* 焦点链接内部留白 */
+    background-color: #FFFFFF; /* 显示时使用白色背景 */
+    color: #243F33; /* 保证文字可读 */
+} /* 辅助链接结束 */
+.skip-link:focus { /* 用户按 Tab 选中辅助链接时 */
+    top: 10px; /* 将链接移回可见位置 */
+} /* 辅助链接焦点结束 */
+@media (max-width: 700px) { /* 【修改手机布局】屏幕宽度不超过 700 像素时生效 */
+    .hero, .gallery, .service-grid, .video-panel, .contact-grid { /* 手机上的所有多列区域 */
+        grid-template-columns: 1fr; /* 改为单列，从上到下阅读 */
+        gap: 28px; /* 缩小手机上的内容间距 */
+    } /* 手机单列设置结束 */
+    .hero, .section-space { /* 手机首页与区域留白 */
+        padding-top: 40px; /* 手机顶部留白 */
+        padding-bottom: 40px; /* 手机底部留白 */
+    } /* 手机间距设置结束 */
+    h1 { /* 手机主标题 */
+        font-size: 38px; /* 缩小标题避免超出屏幕 */
+    } /* 手机标题结束 */
+    .video-panel { /* 手机视频面板 */
+        padding: 20px; /* 减少内边距，为视频留出宽度 */
+    } /* 手机视频设置结束 */
+    nav { /* 手机导航区域 */
+        gap: 18px; /* 四个导航项紧凑排列，需要时自动换行 */
+    } /* 手机导航结束 */
+} /* 手机媒体查询结束 */

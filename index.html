@@ -1,0 +1,127 @@
+<!DOCTYPE html> <!-- 声明使用 HTML5，浏览器按现代网页标准显示 -->
+<html lang="en"> <!-- 页面内容使用英文，辅助阅读工具据此选择语言 -->
+<head> <!-- 网页设置区域，不直接显示在正文中 -->
+    <meta charset="UTF-8"> <!-- 使用 UTF-8，确保英文和中文注释正确保存 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 手机按照实际设备宽度显示 -->
+    <meta name="description" content="Nature Frame: a simple photography portfolio by Li Haoran."> <!-- 搜索和浏览器可读取的页面简介 -->
+    <title>Nature Frame | Li Haoran</title> <!-- 浏览器标签页标题，可修改这里的文字 -->
+    <link rel="stylesheet" href="style.css"> <!-- 使用同一文件夹中的 CSS，无需安装依赖 -->
+</head> <!-- 网页设置结束 -->
+<body> <!-- 所有可见网页内容从这里开始 -->
+    <a class="skip-link" href="#main">Skip to content</a> <!-- 键盘用户按 Tab 可以跳过导航 -->
+    <header> <!-- 顶部品牌和导航区域；背景颜色在 CSS 中修改 -->
+        <div class="container header-row"> <!-- 共用宽度容器，使品牌和导航整齐对齐 -->
+            <a class="brand" href="#home">Nature Frame<span>PHOTOGRAPHY BY LI HAORAN</span></a> <!-- 顶部品牌和小字，可直接修改文字 -->
+            <nav aria-label="Main navigation"> <!-- 导航标签供屏幕阅读器识别 -->
+                <a href="#home">Home</a> <!-- 【修改导航文字】只修改 Home；#home 对应首页区域 -->
+                <a href="#about">About</a> <!-- 点击后跳转到 id 为 about 的区域 -->
+                <a href="#services">Services</a> <!-- 点击后跳转到服务区域 -->
+                <a href="#contact">Contact</a> <!-- 点击后跳转到联系区域 -->
+                <!-- 【增加导航链接】可在这里加入 <a href="#gallery">Gallery</a>，对应下方已有的 gallery 编号 -->
+            </nav> <!-- 导航结束 -->
+        </div> <!-- 顶部对齐容器结束 -->
+    </header> <!-- 顶部结束 -->
+    <main id="main"> <!-- 正文区域；编号 main 供跳过导航链接使用 -->
+        <section id="home" class="container hero"> <!-- Home 区域，导航通过 #home 找到这里 -->
+            <div> <!-- 首页文字列，与右边照片组成两列 -->
+                <p class="eyebrow">A SMALL COLLECTION OF QUIET MOMENTS</p> <!-- 主标题上方的小标题 -->
+                <h1>Nature Frame</h1> <!-- 【修改网站主标题】老师要求更改主标题时修改这里 -->
+                <p class="lead">Finding beauty in nature and the places we pass.</p> <!-- 【修改介绍文字】首页主要介绍句 -->
+                <p>I am Li Haoran. Explore a collection of coastal scenes, quiet details and life outdoors.</p> <!-- 简短介绍；学生应确认并改成自己的表达 -->
+                <a class="button" href="#contact">Get in touch</a> <!-- 普通锚点链接，跳转到联系表单 -->
+            </div> <!-- 首页文字列结束 -->
+            <figure> <!-- 主图及其说明作为一个完整内容组 -->
+                <img src="assets/images/pink-van.jpg" alt="A weathered pink van beside leafless trees on coastal grassland." width="1280" height="853"> <!-- 【修改首页图片】修改 src 相对路径，并同步修改 alt 图片说明 -->
+                <figcaption>01 / Stillness by the coast</figcaption> <!-- 图片说明文字，可以直接修改 -->
+            </figure> <!-- 主图组结束 -->
+        </section> <!-- Home 区域结束 -->
+        <section id="about" class="section-white"> <!-- About 区域，白色背景区分上下内容 -->
+            <div class="container section-space"> <!-- 控制最大宽度和上下间距 -->
+                <p class="eyebrow">THE PERSON BEHIND THE FRAME</p> <!-- About 的辅助标题 -->
+                <h2>About</h2> <!-- 二级标题，四个主要区域保持一致 -->
+                <p class="intro">I am Li Haoran, a student with an interest in nature photography. I enjoy observing trees, animals and the small details of outdoor places. My style is simple: natural colours, clear compositions and a calm atmosphere.</p> <!-- 【修改个人介绍】这是待学生确认的介绍初稿 -->
+                <h3 id="gallery">Selected photographs</h3> <!-- 作品集小标题；增加 Gallery 导航时使用 #gallery -->
+                <div class="gallery"> <!-- 三张作品的简单网格，手机上变成单列 -->
+                    <figure> <!-- 第一张作品及说明 -->
+                        <img src="assets/images/coastal-tree.jpg" alt="A leafless tree standing on grass beside a calm blue-grey sea." width="853" height="1280" loading="lazy"> <!-- 【修改作品图片】改 src 和 alt；懒加载减少首次读取量 -->
+                        <figcaption>02 / A tree by the sea</figcaption> <!-- 图片说明与图片保持邻近 -->
+                    </figure> <!-- 第一张作品结束 -->
+                    <figure> <!-- 第二张作品及说明 -->
+                        <img src="assets/images/blue-van.jpg" alt="The side of a blue vintage van with the sea in the background." width="853" height="1280" loading="lazy"> <!-- 第二张原始图片，按比例显示 -->
+                        <figcaption>03 / Blue coastal escape</figcaption> <!-- 第二张作品标题 -->
+                    </figure> <!-- 第二张作品结束 -->
+                    <figure> <!-- 第三张作品及说明 -->
+                        <img src="assets/images/goat.jpg" alt="A white and brown goat looking towards the camera in a grassy field." width="853" height="1280" loading="lazy"> <!-- 第三张原始图片，提供准确替代文字 -->
+                        <figcaption>04 / Life in the field</figcaption> <!-- 第三张作品标题 -->
+                    </figure> <!-- 第三张作品结束 -->
+                </div> <!-- 图片网格结束 -->
+                <div class="video-panel"> <!-- 使用深绿色突出视频展示区域 -->
+                    <div> <!-- 视频的标题与文字说明 -->
+                        <p class="eyebrow">MOTION &amp; NATURE</p> <!-- &amp; 是合法的英文与符号写法 -->
+                        <h3>A journey through green</h3> <!-- 视频标题 -->
+                        <p>A short view of green woodland through a moving vehicle window. Press play to explore the scene.</p> <!-- 视频画面内容说明，不声称是本人拍摄 -->
+                    </div> <!-- 视频说明列结束 -->
+                    <video src="assets/video/nature.mp4" controls preload="metadata" playsinline aria-label="Woodland viewed through a moving vehicle window"> <!-- 【修改视频】替换 src 的本地 MP4；controls 提供播放暂停音量，手机可内嵌播放 -->
+                        Your browser does not support HTML5 video. <!-- 不支持视频标签的浏览器显示这段提示 -->
+                    </video> <!-- 不自动播放视频，由访客控制播放 -->
+                </div> <!-- 视频区域结束 -->
+            </div> <!-- About 内部容器结束 -->
+        </section> <!-- About 区域结束 -->
+        <section id="services" class="container section-space"> <!-- Services 区域及统一上下留白 -->
+            <p class="eyebrow">A SIMPLE APPROACH TO PHOTOGRAPHY</p> <!-- 服务辅助标题 -->
+            <h2>Services</h2> <!-- 服务主标题 -->
+            <p class="intro">Photography ideas for places, people and shared moments. Contact me to discuss a project.</p> <!-- 服务介绍，实际服务能力由学生确认 -->
+            <div class="service-grid"> <!-- 桌面三列服务卡片 -->
+                <article class="service-card"> <!-- 一个独立的服务内容块 -->
+                    <svg class="icon" viewBox="0 0 48 48" aria-hidden="true"> <!-- 内嵌山峰图形，不需要外部图标库；文字已说明含义，图标对辅助工具隐藏 -->
+                        <path d="M6 36 L20 12 L29 27 L34 20 L44 36 Z M15 21 L20 25 L24 20" /> <!-- 路径坐标画出山峰与山脊 -->
+                    </svg> <!-- 第一项图形结束 -->
+                    <h3>Landscape Photography</h3> <!-- 【修改服务名称】直接修改标题文字 -->
+                    <p>Natural views and outdoor spaces, captured with attention to light and composition.</p> <!-- 风景摄影的简短说明 -->
+                </article> <!-- 第一张服务卡结束 -->
+                <article class="service-card"> <!-- 第二张服务卡 -->
+                    <svg class="icon" viewBox="0 0 48 48" aria-hidden="true"> <!-- 人物图形，配合人像摄影标题 -->
+                        <circle cx="24" cy="16" r="7" /> <!-- 圆形代表人物头部 -->
+                        <path d="M10 39 C10 23 38 23 38 39" /> <!-- 曲线代表人物肩部 -->
+                    </svg> <!-- 第二项图形结束 -->
+                    <h3>Portrait Photography</h3> <!-- 人像摄影服务标题 -->
+                    <p>Relaxed portraits using natural light and a comfortable outdoor setting.</p> <!-- 人像服务说明 -->
+                </article> <!-- 第二张服务卡结束 -->
+                <article class="service-card"> <!-- 第三张服务卡 -->
+                    <svg class="icon" viewBox="0 0 48 48" aria-hidden="true"> <!-- 日历图形代表活动记录 -->
+                        <rect x="9" y="12" width="30" height="28" rx="2" /> <!-- 矩形代表日历外框 -->
+                        <path d="M9 21 H39 M17 7 V16 M31 7 V16 M17 28 H22 M27 28 H32 M17 33 H22" /> <!-- 线条代表日历横线、装订和日期 -->
+                    </svg> <!-- 第三项图形结束 -->
+                    <h3>Event Photography</h3> <!-- 活动摄影服务标题 -->
+                    <p>Small gatherings and meaningful moments, documented in a clear and natural way.</p> <!-- 活动服务说明 -->
+                </article> <!-- 第三张服务卡结束 -->
+            </div> <!-- 服务网格结束 -->
+        </section> <!-- Services 区域结束 -->
+        <section id="contact" class="section-white"> <!-- Contact 联系区域 -->
+            <div class="container section-space contact-grid"> <!-- 桌面说明和表单分两列，手机堆叠 -->
+                <div> <!-- 左侧联系说明 -->
+                    <p class="eyebrow">LET'S START A CONVERSATION</p> <!-- 联系辅助标题 -->
+                    <h2>Contact</h2> <!-- 联系主标题 -->
+                    <p>Have a photography idea? Leave a name, email and message below.</p> <!-- 表单用途说明 -->
+                    <p id="form-note" class="form-note">Classroom demonstration only. The Submit button does not send or save your details.</p> <!-- 明确说明展示表单不发送也不保存数据 -->
+                </div> <!-- 联系说明结束 -->
+                <form aria-label="Contact demonstration" aria-describedby="form-note"> <!-- 纯展示表单，没有后台；说明与表单关联 -->
+                    <label for="name">Name</label> <!-- 标签的 for 与输入框 id 对应 -->
+                    <input id="name" name="name" type="text" autocomplete="name" placeholder="Your name"> <!-- 姓名输入框，提示文字可修改 -->
+                    <label for="email">Email</label> <!-- 点击标签可选中邮箱输入框 -->
+                    <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com"> <!-- 邮箱类型输入框 -->
+                    <label for="message">Message</label> <!-- 多行文本框的标签 -->
+                    <textarea id="message" name="message" rows="5" placeholder="Tell me about your idea"></textarea> <!-- rows 控制文本框初始高度 -->
+                    <button type="button" class="button">Submit</button> <!-- type=button 保证演示按钮不提交；按钮文字是 Submit -->
+                </form> <!-- 表单结束 -->
+            </div> <!-- 联系区域内部容器结束 -->
+        </section> <!-- Contact 区域结束 -->
+    </main> <!-- 网页正文结束 -->
+    <footer> <!-- 页面底部信息 -->
+        <div class="container footer-row"> <!-- 页脚左右对齐的容器 -->
+            <p>Nature Frame · Li Haoran · ICT2215 student project</p> <!-- 项目署名，可直接修改 -->
+            <a href="#home">Back to top ↑</a> <!-- 回到首页的锚点链接 -->
+        </div> <!-- 页脚容器结束 -->
+    </footer> <!-- 页脚结束 -->
+</body> <!-- 可见内容结束 -->
+</html> <!-- HTML 文档结束 -->
